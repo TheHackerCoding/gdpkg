@@ -1,0 +1,14 @@
+#!/bin/bash
+SUDO=''
+if (( $EUID != 0 )); then
+    SUDO='sudo'
+fi
+if [ $# -eq 0 ]
+then
+    debfile=$(zenity --file-selection --file-filter=*.deb)
+else
+    debfile=$1
+fi
+
+
+eval gnome-terminal --title=gdpkg --wait --name=gdpkg -- "sudo dpkg -i $debfile"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=gdpkg
+Exec= sh -c "gdpkg %F"
+Comment=Literally a terminal showing dpkg running.
+Categories=Graphics;Utility;TerminalEmulator;
+Terminal=false
+Icon=utilities-terminal

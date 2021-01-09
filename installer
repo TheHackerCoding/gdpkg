@@ -1,0 +1,12 @@
+#!/bin/bash
+SUDO=''
+if (( $EUID != 0 )); then
+    SUDO='sudo'
+fi
+echo "Installing..."
+$SUDO cp gdpkg /usr/bin/
+$SUDO cp gdpkg.desktop /usr/share/applications/
+$SUDO chmod +x /usr/bin/gdpkg
+echo "application/vnd.debian.binary-package=gdpkg.desktop" | $SUDO tee -a /usr/share/applications/defaults.list
+echo "application/octet-stream=gdpkg.desktop" | $SUDO tee -a /usr/share/applications/defaults.list
+echo "Done :)"
