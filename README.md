@@ -16,4 +16,4 @@ gnome-terminal "might change that later"
 tee "should be in every linux os"
 ```
 ## Other info
-Based on the `.desktop` file, it should work with browsers when downloaded
+Based on the `.desktop` file, it should work when browsers download a `.deb`
